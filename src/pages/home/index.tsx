@@ -26,6 +26,7 @@ import {
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
 } from "./style";
+
 import { HandEffect } from "@/components/HandEffect";
 
 export const Home = (): JSX.Element => {
@@ -39,37 +40,40 @@ export const Home = (): JSX.Element => {
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
                 title={userData.nameUser}
-                width={"48px"}
-                height={"48px"}
+                width={"78px"}
+                height={"78px"}
               />
               <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello, my name is {userData.nameUser} <HandEffect />
+                Olá, meu nome é {userData.nameUser} <HandEffect />
               </Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-              I{" "}
+              Eu{" "}
               <Text as="span" type="heading1" color="brand1">
-                love
+                amo
               </Text>{" "}
-              creating and{" "}
+              criar e{" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                codar
               </Text>{" "}
-              projects
+              novos projetos
             </Text>
             <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+              Aqui você vai conhecer alguns projetos e um pouco sobre mim, curtiu?
+              Quer ver mais? visite meu Linked in e GitHub
+              
+              {/* Discover here in this environment, created especially for you, all */}
+              {/* my projects and technologies */}
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
-                See Projects
+                Projetos
               </Button>
               <Button
                 as="a"
                 type="circle"
                 target="_blank"
-                href={userData.githubUser}
+                href={`https://github.com/${userData.githubUser}`}
               >
                 <FaGithub />
               </Button>
